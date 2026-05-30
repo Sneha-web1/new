@@ -19,9 +19,77 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="register.css" />
   </head>
+<style>
+    @media (max-width: 860px) {
+      .header-actions-desktop {
+        display: none !important;
+      }
 
+      .mobile-nav-panel {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--ata-cream);
+        padding: 5rem 1.5rem 2.5rem;
+        transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 150;
+        overflow-y: auto;
+        gap: 0;
+      }
+
+      .nav-open .mobile-nav-panel {
+        right: 0;
+      }
+
+      .mobile-nav-panel .header-links {
+        position: static !important;
+        height: auto !important;
+        width: 100% !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        flex: 1;
+      }
+
+      .mobile-nav-panel .header-actions {
+        position: static !important;
+        height: auto !important;
+        width: 100% !important;
+        background: transparent !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 1.2rem 0 0 !important;
+        margin-top: 1rem !important;
+        border-top: 1px solid rgba(11, 58, 122, 0.1) !important;
+        gap: 0.8rem !important;
+      }
+
+      .mobile-nav-panel .header-actions .btn-nav {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .mobile-nav-panel .nav-dropdown {
+        width: 100%;
+        text-align: center;
+      }
+
+      .mobile-nav-panel .nav-dropdown .btn-nav-dropdown {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
   <body>
-    <!-- ATARAXIS Style Header -->
     <nav class="ataraxis-header">
       <div class="nav-mobile-toggle" id="mobile-toggle">
         <span></span>
@@ -29,15 +97,112 @@
         <span></span>
       </div>
 
-      <ul class="header-links">
-        <li><a href="index.html">Homepage</a></li>
-        <li><a href="index.html#about-sangama">About</a></li>
-        <li><a href="index.html#committee">Committee</a></li>
-        <li><a href="index.html#schedule">Schedule</a></li>
-        <li><a href="index.html#contact-connect">Contact</a></li>
-      </ul>
+      <div class="mobile-nav-panel">
+        <ul class="header-links">
+          <li><a href="index.html" class="active">Homepage</a></li>
+          <li><a href="index.html#about-sangama">About</a></li>
+          <li><a href="index.html#committee">Committee</a></li>
+          <li><a href="index.html#schedule">Schedule</a></li>
+          <li><a href="index.html#contact-connect">Contact</a></li>
+        </ul>
+        <div class="header-actions">
+          <div class="nav-dropdown">
+            <a
+              href="#"
+              class="btn-nav btn-nav-outline btn-nav-dropdown"
+              style="
+                border-color: var(--ata-gold);
+                color: var(--ata-gold);
+                background: rgba(217, 157, 61, 0.05);
+              "
+            >
+              <span style="display: flex; align-items: center; gap: 0.5rem"
+                >Call for Abstracts 📝</span
+              >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="abstract.html" class="dropdown-item"
+                ><span>Submission</span
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
+              ></a>
+              <a href="awards.html" class="dropdown-item"
+                ><span>Prizes</span
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
+              ></a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#" class="btn-nav btn-nav-primary btn-nav-dropdown">
+              <span>Register</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <div class="dropdown-menu">
+              <a href="register.html" class="dropdown-item"
+                ><span>Register Now</span
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
+              ></a>
+              <a href="abstract.html" class="dropdown-item"
+                ><span>Submit Abstract</span
+                ><svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div class="header-actions">
+      <!-- Desktop only -->
+      <div class="header-actions-desktop">
         <div class="nav-dropdown">
           <a
             href="#"
@@ -48,9 +213,9 @@
               background: rgba(217, 157, 61, 0.05);
             "
           >
-            <span style="display: flex; align-items: center; gap: 0.5rem">
-              Call for Abstracts 📝
-            </span>
+            <span style="display: flex; align-items: center; gap: 0.5rem"
+              >Call for Abstracts 📝</span
+            >
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -63,9 +228,9 @@
             </svg>
           </a>
           <div class="dropdown-menu">
-            <a href="abstract.html" class="dropdown-item">
-              <span>Submission</span>
-              <svg
+            <a href="abstract.html" class="dropdown-item"
+              ><span>Submission</span
+              ><svg
                 width="14"
                 height="14"
                 viewBox="0 0 24 24"
@@ -73,12 +238,11 @@
                 stroke="currentColor"
                 stroke-width="2"
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="awards.html" class="dropdown-item">
-              <span>Prizes</span>
-              <svg
+                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+            ></a>
+            <a href="awards.html" class="dropdown-item"
+              ><span>Prizes</span
+              ><svg
                 width="14"
                 height="14"
                 viewBox="0 0 24 24"
@@ -86,9 +250,8 @@
                 stroke="currentColor"
                 stroke-width="2"
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+            ></a>
           </div>
         </div>
         <div class="nav-dropdown">
@@ -106,9 +269,9 @@
             </svg>
           </a>
           <div class="dropdown-menu">
-            <a href="register.html" class="dropdown-item">
-              <span>Register Now</span>
-              <svg
+            <a href="register.html" class="dropdown-item"
+              ><span>Register Now</span
+              ><svg
                 width="14"
                 height="14"
                 viewBox="0 0 24 24"
@@ -116,12 +279,11 @@
                 stroke="currentColor"
                 stroke-width="2"
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href="abstract.html" class="dropdown-item">
-              <span>Submit Abstract</span>
-              <svg
+                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+            ></a>
+            <a href="abstract.html" class="dropdown-item"
+              ><span>Submit Abstract</span
+              ><svg
                 width="14"
                 height="14"
                 viewBox="0 0 24 24"
@@ -129,9 +291,8 @@
                 stroke="currentColor"
                 stroke-width="2"
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+                <path d="M5 12h14M12 5l7 7-7 7" /></svg
+            ></a>
           </div>
         </div>
       </div>
