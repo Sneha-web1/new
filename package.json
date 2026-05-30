@@ -1,0 +1,13 @@
+{
+  "name": "sangama-onco-conclave",
+  "version": "1.0.0",
+  "description": "SANGAMA 2026: International Integrated Oncology Symposium website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "dev": "npx http-server -p 8080"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
