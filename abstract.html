@@ -30,9 +30,9 @@
         right: -100%;
         width: 80%;
         max-width: 320px;
-        height: 100vh;
+        height: 90vh;
         background: var(--ata-cream);
-        padding: 5rem 1.5rem 2.5rem;
+        padding: 1rem 1.5rem 2.5rem;
         transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
         z-index: 150;
@@ -85,6 +85,100 @@
         justify-content: center;
       }
     }
+    @media (max-width: 400px) {
+      .ataraxis-header {
+        width: 80% !important;
+      }
+      .cq-item{
+        font-size: 10px !important;
+      }
+    }
+  </style>
+  <style>
+    @media (max-width: 768px) {
+      .page-hero-inner {
+        padding: 6rem 1.5rem 3rem;
+        text-align: center;
+      }
+      .page-label {
+        font-size: 0.7rem;
+      }
+      .page-title {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+      }
+      .page-subtitle {
+        font-size: 0.9rem;
+      }
+      .info-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+      }
+      .guidelines-card {
+        padding: 1.5rem 1.2rem !important;
+        border-radius: 16px !important;
+      }
+      .info-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.85rem;
+      }
+      .abstract-card {
+        padding: 1.5rem 1rem !important;
+        border-radius: 16px !important;
+      }
+      .field-row {
+        grid-template-columns: 1fr !important;
+      }
+      .category-cards {
+        flex-direction: column !important;
+      }
+      .presentation-types {
+        flex-direction: column !important;
+      }
+      .hod-download-banner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+      }
+      .hod-download-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .contact-queries-grid {
+        flex-direction: column !important;
+        gap: 1rem !important;
+      }
+      .guidelines-card > div[style*="grid-template-columns: repeat(2"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .abstract-container {
+        padding: 0 0.8rem !important;
+      }
+      .guidelines-section {
+        padding: 2rem 0.8rem !important;
+      }
+      .abstract-form-section {
+        padding: 2rem 0 !important;
+      }
+      .info-card-mini {
+        padding: 1rem !important;
+      }
+      .card-value {
+        font-size: 1rem !important;
+      }
+      .btn-submit {
+        width: 100% !important;
+        font-size: 0.9rem !important;
+      }
+      .radio-group {
+        flex-wrap: wrap !important;
+        gap: 0.6rem !important;
+      }
+    }
   </style>
   <body>
     <nav class="ataraxis-header">
@@ -105,7 +199,7 @@
         <div class="header-actions">
           <div class="nav-dropdown">
             <a
-              href="#"
+              href="abstract.html"
               class="btn-nav btn-nav-outline btn-nav-dropdown"
               style="
                 border-color: var(--ata-gold);
@@ -155,7 +249,7 @@
             </div>
           </div>
           <div class="nav-dropdown">
-            <a href="#" class="btn-nav btn-nav-primary btn-nav-dropdown">
+            <a href="register.html" class="btn-nav btn-nav-primary btn-nav-dropdown">
               <span>Register</span>
               <svg
                 viewBox="0 0 24 24"
@@ -1916,6 +2010,5 @@
     </a>
 
     <script src="abstract.js"></script>
-    
   </body>
 </html>
